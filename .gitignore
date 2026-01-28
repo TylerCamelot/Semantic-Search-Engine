@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Streamlit secrets - NEVER commit API keys!
+.streamlit/secrets.toml
+
+# Data files (large)
+*.npy
+*.npz
+pdf_articles_fulltext/
+clean_txt/
+*.pdf
+
+# Generated data files
+clean_articles.jsonl
+metadata.jsonl
+embeddings.npy
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
