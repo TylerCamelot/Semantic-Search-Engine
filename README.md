@@ -2,7 +2,7 @@
 
 A powerful semantic search engine for news articles that uses advanced NLP techniques to find relevant articles based on meaning rather than just keywords. Built with SentenceTransformers, Streamlit, and OpenAI.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements a complete semantic search pipeline for news articles:
 
@@ -15,7 +15,7 @@ This project implements a complete semantic search pipeline for news articles:
 7. **AI Summarization**: Generates summaries using OpenAI or extractive methods
 8. **Web Interface**: Interactive Streamlit app with modern UI
 
-## ✨ Features
+## Features
 
 - **Semantic Search**: Find articles by meaning, not just keywords
 - **AI-Powered Summaries**: Automatic article summarization (OpenAI or extractive fallback)
@@ -25,13 +25,13 @@ This project implements a complete semantic search pipeline for news articles:
 - **Modern UI**: Colorful, responsive Streamlit interface
 - **Quality Filtering**: Ensures articles meet minimum quality standards
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.8 or higher
 - NewsAPI key (free tier available at [newsapi.org](https://newsapi.org))
 - OpenAI API key (optional, for AI summaries and title generation)
 
-## 🚀 Setup
+## Setup
 
 ### 1. Clone the Repository
 
@@ -94,7 +94,7 @@ This will:
 - Download articles from NewsAPI across 8 topics
 - Extract full text from article URLs
 - Validate text quality
-- Save articles as PDFs in `pdf_articles_fulltext/`
+- Save articles as PDFs in pdf_articles_fulltext/
 - Target: 1000 articles (125 per topic)
 
 ### 5. Preprocess PDFs
@@ -108,7 +108,7 @@ This will:
 - Clean and normalize text
 - Parse metadata (title, source, published date, topic, URL)
 - Filter articles by minimum word count (200 words)
-- Save cleaned articles to `clean_articles.jsonl` and `clean_txt/`
+- Save cleaned articles to clean_articles.jsonl and clean_txt/
 
 ### 6. Generate Embeddings
 
@@ -117,10 +117,10 @@ python create_embeddings.py
 ```
 
 This will:
-- Load cleaned articles from `clean_articles.jsonl`
+- Load cleaned articles from clean_articles.jsonl
 - Generate embeddings using SentenceTransformer (`all-MiniLM-L6-v2`)
-- Save embeddings to `embeddings.npy`
-- Save metadata to `metadata.jsonl`
+- Save embeddings to embeddings.npy
+- Save metadata to metadata.jsonl
 
 ### 7. Run the Web Application
 
@@ -128,7 +128,7 @@ This will:
 streamlit run app.py
 ```
 
-The app will open in your default web browser at `http://localhost:8501`
+The app will open in your default web browser at http://localhost:8501
 
 ## 📖 Usage Examples
 
@@ -202,7 +202,7 @@ URL: https://example.com/article1
    - Access full article text
    - Click URLs to read original articles
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Semantic_Search_Engine/
@@ -232,7 +232,7 @@ Semantic_Search_Engine/
 
 ### Similarity Threshold
 
-In `app.py`, adjust the similarity threshold:
+In app.py, adjust the similarity threshold:
 
 ```python
 SIMILARITY_THRESHOLD = 0.25  # Minimum similarity score to show results
@@ -240,7 +240,7 @@ SIMILARITY_THRESHOLD = 0.25  # Minimum similarity score to show results
 
 ### Topics and Queries
 
-In `download_articles.py`, customize topics:
+In download_articles.py, customize topics:
 
 ```python
 TOPICS = {
@@ -252,7 +252,7 @@ TOPICS = {
 
 ### Embedding Model
 
-Change the embedding model in `create_embeddings.py` or `app.py`:
+Change the embedding model in create_embeddings.py or app.py:
 
 ```python
 MODEL_NAME = "all-MiniLM-L6-v2"  # Fast and efficient
@@ -290,9 +290,9 @@ Automatically generates titles for untitled articles:
 ### "Missing required files" Error
 
 Make sure you've run the pipeline in order:
-1. `download_articles.py` → creates PDFs
-2. `preprocess_pdf.py` → creates `clean_articles.jsonl`
-3. `create_embeddings.py` → creates `embeddings.npy` and `metadata.jsonl`
+1. download_articles.py → creates PDFs
+2. preprocess_pdf.py → creates clean_articles.jsonl
+3. create_embeddings.py → creates embeddings.npy and metadata.jsonl
 
 ### NewsAPI Rate Limits
 
@@ -310,36 +310,21 @@ If OpenAI API fails:
 ### Memory Issues
 
 For large datasets:
-- Reduce `TARGET_PDFS` in `download_articles.py`
-- Use smaller batch size in `create_embeddings.py`
+- Reduce TARGET_PDFS in download_articles.py
+- Use smaller batch size in create_embeddings.py
 - Process articles in smaller batches
 
-## 📊 Performance
+## Performance
 
 - **Embedding Generation**: ~1000 articles in 2-5 minutes
 - **Search Speed**: <100ms for 1000 articles
 - **Summary Generation**: 2-5 seconds per article (OpenAI)
 
-## 🔐 Security Notes
+## Security Notes
 
 - Never commit API keys to version control
-- Use environment variables or `.streamlit/secrets.toml`
-- The `.streamlit/secrets.toml` file is gitignored by default
-
-## 📝 License
-
-This project is for educational purposes.
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📧 Support
-
-For issues or questions, please open an issue on GitHub.
+- Use environment variables or .streamlit/secrets.toml
+- The .streamlit/secrets.toml file is gitignored by default
 
 ---
+
