@@ -130,7 +130,7 @@ streamlit run app.py
 
 The app will open in your default web browser at http://localhost:8501
 
-## 📖 Usage Examples
+## Usage Examples
 
 ### Command-Line Search
 
@@ -228,7 +228,7 @@ Semantic_Search_Engine/
     └── secrets.toml          # Streamlit secrets (API keys)
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Similarity Threshold
 
@@ -259,7 +259,7 @@ MODEL_NAME = "all-MiniLM-L6-v2"  # Fast and efficient
 # Alternatives: "all-mpnet-base-v2" (better quality, slower)
 ```
 
-## 🎨 Features Explained
+## Features Explained
 
 ### Semantic Search
 
@@ -285,7 +285,7 @@ Automatically generates titles for untitled articles:
 - Uses OpenAI if available
 - Falls back to first sentence extraction
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### "Missing required files" Error
 
@@ -327,4 +327,5 @@ For large datasets:
 - The .streamlit/secrets.toml file is gitignored by default
 
 ---
+
 
