@@ -1,9 +1,5 @@
 # Team Contributions
 
-**Semantic News Search Engine** · MSBA Winter 2025 — NLP Project
-
-Who did what on this project.
-
 ---
 
 ## Tyler Camelot
